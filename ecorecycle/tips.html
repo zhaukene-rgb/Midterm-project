@@ -12,12 +12,12 @@
     <header>
       <nav class="navbar eco-nav">
         <div class="container flex-wrap">
-          <a class="navbar-brand" href="index.html">Eco<span>Recycle</span></a>
+          <a class="navbar-brand" href="../index.html">Eco<span>Recycle</span></a>
           <ul class="nav flex-wrap">
-            <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link " href="points.html">Drop-off points</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="points.html">Drop-off points</a></li>
             <li class="nav-item"><a class="nav-link active" href="tips.html">Eco tips</a></li>
-            <li class="nav-item"><a class="nav-link " href="request.html">Request pickup</a></li>
+            <li class="nav-item"><a class="nav-link" href="request.html">Request pickup</a></li>
           </ul>
         </div>
       </nav>
@@ -28,6 +28,7 @@
           <h1>Sorting made simple</h1>
           <p class="lead">What goes in each bin, and which plastics you can use again.</p>
         </div>
+ 
         <section>
           <div class="row g-4">
             <div class="col-md-6 col-lg-3">
@@ -56,17 +57,19 @@
             </div>
           </div>
         </section>
+ 
         <section class="mt-5">
-          <h2>Which plastics can I reuse?</h2>
+          <h2 class="mb-2">Which plastics can you recycle?</h2>
           <p>Look for the number inside the triangle on the bottom of the item.</p>
           <div class="table-responsive">
             <table class="table align-middle bg-white">
+              <caption>Rules can differ between collection points. Check with the point first.</caption>
               <thead>
                 <tr>
                   <th scope="col">Code</th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Examples</th>
-                  <th scope="col">Reuse?</th>
+                  <th scope="col">Plastic</th>
+                  <th scope="col">Found in</th>
+                  <th scope="col">Recyclable?</th>
                 </tr>
               </thead>
               <tbody>
@@ -74,61 +77,66 @@
                   <th scope="row">1</th>
                   <td>PET</td>
                   <td>Water and soda bottles</td>
-                  <td class="no">No, recycle after one use</td>
+                  <td class="yes">Yes</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td>HDPE</td>
                   <td>Milk jugs, shampoo bottles</td>
-                  <td class="yes">Yes, many times</td>
+                  <td class="yes">Yes</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td>PVC</td>
-                  <td>Pipes, cling film</td>
-                  <td class="no">No, avoid</td>
+                  <td>Pipes, some packaging</td>
+                  <td class="no">No</td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
                   <td>LDPE</td>
-                  <td>Shopping bags</td>
-                  <td class="maybe">Yes, until they tear</td>
+                  <td>Plastic bags, films</td>
+                  <td class="maybe">Sometimes</td>
                 </tr>
                 <tr>
                   <th scope="row">5</th>
                   <td>PP</td>
-                  <td>Food tubs, lunch boxes</td>
-                  <td class="yes">Yes, heat-resistant</td>
+                  <td>Yogurt cups, bottle caps</td>
+                  <td class="yes">Yes</td>
                 </tr>
                 <tr>
                   <th scope="row">6</th>
                   <td>PS</td>
-                  <td>Foam cups and trays</td>
-                  <td class="no">No, avoid</td>
+                  <td>Foam trays, disposable cups</td>
+                  <td class="maybe">Sometimes</td>
                 </tr>
                 <tr>
                   <th scope="row">7</th>
                   <td>Other</td>
                   <td>Mixed plastics</td>
-                  <td class="maybe">Check the label first</td>
+                  <td class="no">No</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
+ 
         <section class="mt-5">
-          <h2 class="mb-3">Quick answers</h2>
+          <h2 class="mb-3">Quick questions</h2>
           <details>
             <summary>Do I need to wash everything?</summary>
-            <p class="mb-0 mt-2">A quick rinse is enough. Food residue is the main reason recyclables get rejected.</p>
+            <p class="mb-0 mt-2">A quick rinse is enough. Food leftovers can spoil a whole batch of paper or plastic.</p>
           </details>
           <details>
-            <summary>What about plastic bags?</summary>
-            <p class="mb-0 mt-2">Reuse them first. Clean bags can go to store collection bins.</p>
+            <summary>Should I remove bottle caps?</summary>
+            <p class="mb-0 mt-2">Yes. Caps are often a different type of plastic, so put them in a separate bag.</p>
           </details>
           <details>
-            <summary>Where do old gadgets go?</summary>
-            <p class="mb-0 mt-2">Electronics points take phones, chargers and small appliances. For big items, <a href="request.html">request a pickup</a>.</p>
+            <summary>Where do I take old batteries and phones?</summary>
+            <p class="mb-0 mt-2">Never put them in the bin. Use a battery or electronics point from the <a href="points.html">drop-off points</a> page.</p>
+          </details>
+          <details>
+            <summary>What if the item is too big to carry?</summary>
+            <p class="mb-0 mt-2">Old furniture and appliances can be collected by a courier. Send a <a href="request.html">pickup request</a>.</p>
           </details>
         </section>
       </div>
@@ -137,7 +145,7 @@
       <div class="container">
         <div class="row g-3">
           <div class="col-md-6"><b class="text-white">EcoRecycle</b><br>Sort smart. Drop off close. Waste less.</div>
-          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a>, map by <a href="https://www.google.com/maps">Google Maps</a>, emoji icons. Points shown are sample data.</div>
+          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a></div>
         </div>
       </div>
     </footer>

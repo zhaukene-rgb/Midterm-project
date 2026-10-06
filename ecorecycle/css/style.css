@@ -4,53 +4,61 @@ body {
   color: #1c3b33;
   line-height: 1.6;
   margin: 0;
+  /* footer әрқашан төменде тұруы үшін */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
+ 
+main {
+  flex: 1;
+}
+ 
 h1, h2, h3, h4, .navbar-brand {
   font-family: 'Bricolage Grotesque', sans-serif;
 }
-
+ 
 a {
   color: #2f7d62;
   text-decoration: none;
 }
-
+ 
 a:hover {
   color: #1c3b33;
 }
-
+ 
 .eco-nav {
   background: #fff;
   border-bottom: 1px solid #d5e3da;
   padding: 8px 0;
 }
-
+ 
 .navbar-brand {
   font-weight: 800;
   color: #1c3b33;
   font-size: 20px;
 }
-
+ 
 .navbar-brand span {
   color: #2f7d62;
 }
-
+ 
 .eco-nav .nav-link {
   color: #1c3b33;
   padding: 6px 13px;
   border-radius: 8px;
   font-weight: 500;
 }
-
+ 
 .eco-nav .nav-link:hover {
   background: #f2f7f3;
 }
-
+ 
 .eco-nav .nav-link.active {
   background: #d9f0a3;
   font-weight: 600;
 }
-
+ 
 .btn-eco {
   background: #2f7d62;
   color: #fff;
@@ -59,24 +67,24 @@ a:hover {
   font-weight: 600;
   border: none;
 }
-
+ 
 .btn-eco:hover {
   background: #1c3b33;
   color: #fff;
 }
-
+ 
 .hero {
   background: #1c3b33;
   color: #fff;
   padding: 64px 0;
 }
-
+ 
 .hero h1 {
   font-size: clamp(35px, 5vw, 58px);
   font-weight: 800;
   line-height: 1.1;
 }
-
+ 
 .hero .lead {
   color: #c5dccf;
 }
@@ -86,26 +94,26 @@ a:hover {
   border-radius: 16px;
   padding: 24px;
 }
-
+ 
 .panel ul {
   padding: 0;
   margin: 0;
 }
-
+ 
 .panel li {
   padding: 7px 0;
   border-bottom: 1px solid #d5e3da;
   list-style: none;
 }
-
+ 
 .panel li:last-child {
   border: 0;
 }
-
+ 
 .section {
   padding: 48px 0;
 }
-
+ 
 .box {
   background: #fff;
   border: 1px solid #d5e3da;
@@ -113,15 +121,15 @@ a:hover {
   padding: 24px;
   height: 100%;
 }
-
+ 
 .page-head {
   padding: 48px 0 16px;
 }
-
+ 
 .page-head h1 {
   font-weight: 800;
 }
-
+ 
 .map-frame {
   display: none;
   width: 100%;
@@ -129,7 +137,7 @@ a:hover {
   border: 1px solid #d5e3da;
   border-radius: 16px;
 }
-
+ 
 #t-all:checked ~ .maps .map-all,
 #t-plastic:checked ~ .maps .map-plastic,
 #t-paper:checked ~ .maps .map-paper,
@@ -138,12 +146,12 @@ a:hover {
 #t-tech:checked ~ .maps .map-tech {
   display: block;
 }
-
+ 
 .table thead {
   background: #1c3b33;
   color: #fff;
 }
-
+ 
 .tag {
   display: inline-block;
   border-radius: 6px;
@@ -152,7 +160,7 @@ a:hover {
   font-size: 13px;
   background: #d9f0a3;
 }
-
+ 
 .yes { 
   background: #d9f0a3; 
 }
@@ -162,7 +170,7 @@ a:hover {
 .no { 
   background: #fbd0c6; 
 }
-
+ 
 details {
   background: #fff;
   border: 1px solid #d5e3da;
@@ -170,18 +178,18 @@ details {
   padding: 13px 18px;
   margin-bottom: 11px;
 }
-
+ 
 summary {
   font-weight: 600;
   cursor: pointer;
 }
-
+ 
 .form-control, .form-select {
   border-radius: 10px;
   border: 1px solid #d5e3da;
   padding: 10px;
 }
-
+ 
 .chip {
   display: inline-block;
   background: #fff;
@@ -194,14 +202,14 @@ summary {
   font-size: 14px;
   transition: all 0.2s ease;
 }
-
+ 
 .chip:hover {
   background: #1c3b33;
   color: #fff;
   border-color: #1c3b33;
 }
-
-
+ 
+ 
 footer {
   background: #1c3b33;
   color: #c5dccf;
@@ -209,12 +217,12 @@ footer {
   margin-top: 48px;
   font-size: 14px;
 }
-
+ 
 footer a {
   color: #d9f0a3;
 }
-
-
+ 
+ 
 @media (max-width: 767px) {
   .hero { padding: 40px 0; }
   .map-frame { height: 280px; }
