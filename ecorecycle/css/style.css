@@ -4,7 +4,6 @@ body {
   color: #1c3b33;
   line-height: 1.6;
   margin: 0;
-  /* footer әрқашан төменде тұруы үшін */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -161,15 +160,9 @@ a:hover {
   background: #d9f0a3;
 }
  
-.yes { 
-  background: #d9f0a3; 
-}
-.maybe { 
-  background: #fff0b8; 
-}
-.no { 
-  background: #fbd0c6; 
-}
+.yes { background: #d9f0a3; }
+.maybe { background: #fff0b8; }
+.no { background: #fbd0c6; }
  
 details {
   background: #fff;
@@ -208,8 +201,7 @@ summary {
   color: #fff;
   border-color: #1c3b33;
 }
- 
- 
+
 footer {
   background: #1c3b33;
   color: #c5dccf;
@@ -221,10 +213,32 @@ footer {
 footer a {
   color: #d9f0a3;
 }
- 
- 
-@media (max-width: 767px) {
-  .hero { padding: 40px 0; }
-  .map-frame { height: 280px; }
-  .table { font-size: 13px; }
+
+.eco-form-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #d5e3da;
+  box-shadow: 0 10px 25px rgba(15, 107, 95, 0.08);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0F6B5F;
+  box-shadow: 0 0 0 0.25rem rgba(15, 107, 95, 0.25);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+.is-invalid + .error-message {
+  display: block;
+}
+.is-invalid {
+  border-color: #d9534f !important;
+}
+.is-valid {
+  border-color: #2f7d62 !important;
 }

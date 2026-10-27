@@ -12,9 +12,9 @@
     <header>
       <nav class="navbar eco-nav">
         <div class="container flex-wrap">
-          <a class="navbar-brand" href="../index.html">Eco<span>Recycle</span></a>
+          <a class="navbar-brand" href="index.html">Eco<span>Recycle</span></a>
           <ul class="nav flex-wrap">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active" href="points.html">Drop-off points</a></li>
             <li class="nav-item"><a class="nav-link" href="tips.html">Eco tips</a></li>
             <li class="nav-item"><a class="nav-link" href="request.html">Request pickup</a></li>
@@ -28,6 +28,15 @@
           <h1>Drop-off points</h1>
           <p class="lead">You can see the drop-off points in Astana on the map below.</p>
         </div>
+
+      
+        <div class="my-4 p-4 box bg-white">
+          <h3 class="mb-3">Eco Items Configurator & Search</h3>
+          <input type="text" id="search-item" class="form-control mb-3" placeholder="Search item by name...">
+          <div id="configurator-list" class="row"></div>
+          <p class="fw-bold mt-3">Total Value: <span id="total-budget">0</span> KZT</p>
+        </div>
+
         <div class="filter">
           <input type="radio" name="type" id="t-all" checked hidden>
           <input type="radio" name="type" id="t-plastic" hidden>
@@ -36,7 +45,7 @@
           <input type="radio" name="type" id="t-battery" hidden>
           <input type="radio" name="type" id="t-tech" hidden>
 
-          <div class="chips mb-3" role="group" aria-label="Filter by waste type">
+          <div class="mb-3">
             <label class="chip" for="t-all">All</label>
             <label class="chip" for="t-plastic">Plastic</label>
             <label class="chip" for="t-paper">Paper</label>
@@ -60,39 +69,39 @@
             <caption>Sample points. Replace them with real ones before publishing.</caption>
             <thead>
               <tr>
-                <th scope="col">Point</th>
-                <th scope="col">Accepts</th>
-                <th scope="col">Address</th>
-                <th scope="col">Hours</th>
+                <th>Point</th>
+                <th>Accepts</th>
+                <th>Address</th>
+                <th>Hours</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Esil Green Hub</th>
+                <th>Esil Green Hub</th>
                 <td><span class="tag">Plastic</span><span class="tag">Paper</span></td>
                 <td>Sample address 1</td>
                 <td>Mon–Sat 09:00–19:00</td>
               </tr>
               <tr>
-                <th scope="row">Paper Loop Station</th>
+                <th>Paper Loop Station</th>
                 <td><span class="tag">Paper</span></td>
                 <td>Sample address 2</td>
                 <td>Mon–Fri 08:00–18:00</td>
               </tr>
               <tr>
-                <th scope="row">Clear Glass Point</th>
+                <th>Clear Glass Point</th>
                 <td><span class="tag">Glass</span></td>
                 <td>Sample address 3</td>
                 <td>Daily 10:00–20:00</td>
               </tr>
               <tr>
-                <th scope="row">Charge &amp; Return</th>
+                <th>Charge &amp; Return</th>
                 <td><span class="tag">Batteries</span><span class="tag">Electronics</span></td>
                 <td>Sample address 4</td>
                 <td>Mon–Sat 10:00–19:00</td>
               </tr>
               <tr>
-                <th scope="row">Bottle Bank North</th>
+                <th>Bottle Bank North</th>
                 <td><span class="tag">Plastic</span><span class="tag">Glass</span></td>
                 <td>Sample address 5</td>
                 <td>Daily 09:00–21:00</td>
@@ -106,9 +115,10 @@
       <div class="container">
         <div class="row g-3">
           <div class="col-md-6"><b class="text-white">EcoRecycle</b><br>Sort smart. Drop off close. Waste less.</div>
-          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a>, map by <a href="https://www.google.com/maps">Google Maps</a>. Points shown are sample data.</div>
+          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a>, map by <a href="https://www.google.com/maps">Google Maps</a>.</div>
         </div>
       </div>
     </footer>
+    <script src="challenges.js" defer></script>
   </body>
 </html>
