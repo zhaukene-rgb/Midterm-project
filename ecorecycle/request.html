@@ -1,137 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Request pickup | EcoRecycle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar eco-nav">
-        <div class="container flex-wrap">
-          <a class="navbar-brand" href="index.html">Eco<span>Recycle</span></a>
-          <ul class="nav flex-wrap">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="points.html">Drop-off points</a></li>
-            <li class="nav-item"><a class="nav-link" href="tips.html">Eco tips</a></li>
-            <li class="nav-item"><a class="nav-link active" href="request.html">Request pickup</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    
-    <main>
-      <div class="container">
-        <div class="page-head">
-          <h1>Request a pickup</h1>
-          <p class="lead">Old furniture, a fridge or large loads? Fill out the form below and our courier will contact you.</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-lg-8">
-            <div class="box eco-form-box shadow-sm">
-              <form id="pickupForm" action="#" method="post" novalidate>
-                <div class="row g-3">
-                  <div class="col-12">
-                    <label class="form-label d-block fw-bold">Service Type</label>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="serviceType" id="standardPickup" value="standard" checked>
-                      <label class="form-check-label" for="standardPickup">Standard Pickup</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="serviceType" id="expressPickup" value="express">
-                      <label class="form-check-label" for="expressPickup">Express Pickup</label>
-                    </div>
-                  </div>
-
-                
-                  <div class="col-md-6">
-                    <label class="form-label" for="nm">Full name</label>
-                    <input class="form-control" id="nm" name="name" placeholder="Your full name">
-                  </div>
-
-                  <div class="col-md-6">
-                    <label class="form-label" for="ph">Phone</label>
-                    <input class="form-control" id="ph" name="phone" type="tel" placeholder="+7 701 234 56 78">
-                  </div>
-
-                  <div class="col-md-6">
-                    <label class="form-label" for="em">Email</label>
-                    <input class="form-control" id="em" name="email" type="email" placeholder="name@example.com">
-                  </div>
-
-                  <div class="col-md-6">
-                    <label class="form-label" for="wt">Waste type</label>
-                    <select class="form-select" id="wt" name="type">
-                      <option value="">Choose...</option>
-                      <option value="furniture">Old furniture</option>
-                      <option value="appliances">Appliances</option>
-                      <option value="electronics">Electronics</option>
-                      <option value="paper_plastic">Large paper or plastic load</option>
-                    </select>
-                  </div>
-
-                  <div class="col-12">
-                    <label class="form-label d-block fw-bold">Load Size</label>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="size" id="s1" value="small" checked>
-                      <label class="form-check-label" for="s1">Small</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="size" id="s2" value="medium">
-                      <label class="form-check-label" for="s2">Medium</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="size" id="s3" value="large">
-                      <label class="form-check-label" for="s3">Large</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-8">
-                    <label class="form-label" for="ad">Pickup address</label>
-                    <input class="form-control" id="ad" name="address" placeholder="Street, house, apartment">
-                  </div>
-                  <div class="col-md-4">
-                    <label class="form-label" for="dt">Preferred date</label>
-                    <input class="form-control" id="dt" name="date" type="date">
-                  </div>
-
-
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="smsNotif">
-                      <label class="form-check-label" for="smsNotif">Also send confirmation by SMS</label>
-                    </div>
-                    <div class="form-check mt-2">
-                      <input class="form-check-input" type="checkbox" id="ok">
-                      <label class="form-check-label" for="ok">I agree to the pickup rules and terms *</label>
-                    </div>
-                  </div>
-
-                  <div class="col-12 d-flex flex-column flex-md-row gap-2 mt-4">
-                    <button class="btn btn-eco flex-grow-1 order-1 order-md-2" type="submit">Send request</button>
-                    <button class="btn btn-outline-secondary flex-grow-1 order-2 order-md-1" type="reset">Clear</button>
-                  </div>
-
-                </div>
-              </form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EcoRecycle: learn to sort waste, explore collection points and try a pickup request demo.">
+  <title>Request pickup | EcoRecycle</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="navbar eco-nav" aria-label="Main navigation">
+      <div class="container flex-wrap">
+        <a class="navbar-brand" href="index.html"><img class="brand-mark" src="images/logo.svg" alt="">EcoRecycle</a>
+        <ul class="nav flex-wrap">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="points.html">Drop-off points</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips.html">Eco tips</a></li>
+          <li class="nav-item"><a class="nav-link active" href="request.html" aria-current="page">Request pickup</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+<div class="container">
+  <div class="page-head">
+    <span class="eyebrow">Make room for a fresh start</span>
+    <h1>A lighter load starts here.</h1>
+    <p class="lead">Plan a pickup for the things you cannot carry. Choose your options and see the estimate change.</p>
+  </div>
+  <p class="demo-note">Student project demo. The form validates your details in this browser. No information is sent, no payment is taken and no courier is booked. Please use fictional contact details.</p>
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <div id="formSuccess" class="success-box" role="status" tabindex="-1"></div>
+      <div class="box eco-form-box">
+        <form id="pickupForm" novalidate>
+          <h2 class="form-section-title">01 / Your contact details</h2>
+          <p class="form-hint mb-3">Fields marked * are required.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="nm">Full name *</label>
+              <input class="form-control" id="nm" name="name" autocomplete="name" maxlength="80" placeholder="Your full name" required aria-describedby="nm-error">
+              <div class="error-message" id="nm-error"></div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="ph">Phone *</label>
+              <input class="form-control" id="ph" name="phone" type="tel" autocomplete="tel" maxlength="24" placeholder="+7 701 234 56 78" required aria-describedby="ph-error">
+              <div class="error-message" id="ph-error"></div>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="em">Email *</label>
+              <input class="form-control" id="em" name="email" type="email" autocomplete="email" maxlength="120" placeholder="name@example.com" required aria-describedby="em-error">
+              <div class="error-message" id="em-error"></div>
             </div>
           </div>
+          <hr class="form-divider">
+          <h2 class="form-section-title">02 / What are we picking up?</h2>
+          <div class="mb-4">
+            <label class="form-label" for="wt">Waste type *</label>
+            <select class="form-select" id="wt" name="type" required aria-describedby="wt-error">
+              <option value="">Choose a material or item</option>
+              <option value="furniture">Old furniture</option><option value="appliances">Appliances</option><option value="electronics">Electronics</option><option value="paper_plastic">Large paper or plastic load</option>
+            </select>
+            <div class="error-message" id="wt-error"></div>
+          </div>
+          <fieldset class="mb-4">
+            <legend class="form-label">Load size</legend>
+            <div class="choice-row">
+              <div class="choice-card"><div class="form-check"><input class="form-check-input" type="radio" name="size" id="s1" value="small" checked><label class="form-check-label" for="s1">Small<small>2,000 KZT</small></label></div></div>
+              <div class="choice-card"><div class="form-check"><input class="form-check-input" type="radio" name="size" id="s2" value="medium"><label class="form-check-label" for="s2">Medium<small>4,000 KZT</small></label></div></div>
+              <div class="choice-card"><div class="form-check"><input class="form-check-input" type="radio" name="size" id="s3" value="large"><label class="form-check-label" for="s3">Large<small>7,000 KZT</small></label></div></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="form-label">Service type</legend>
+            <div class="choice-row">
+              <div class="choice-card"><div class="form-check"><input class="form-check-input" type="radio" name="serviceType" id="standardPickup" value="standard" checked><label class="form-check-label" for="standardPickup">Standard<small>Base estimate</small></label></div></div>
+              <div class="choice-card"><div class="form-check"><input class="form-check-input" type="radio" name="serviceType" id="expressPickup" value="express"><label class="form-check-label" for="expressPickup">Express<small>+50% to the estimate</small></label></div></div>
+            </div>
+          </fieldset>
+          <hr class="form-divider">
+          <h2 class="form-section-title">03 / Where and when?</h2>
+          <div class="row g-3">
+            <div class="col-md-8"><label class="form-label" for="ad">Pickup address *</label><input class="form-control" id="ad" name="address" autocomplete="street-address" maxlength="160" placeholder="Street, house, apartment" required aria-describedby="ad-error"><div class="error-message" id="ad-error"></div></div>
+            <div class="col-md-4"><label class="form-label" for="dt">Preferred date *</label><input class="form-control" id="dt" name="date" type="date" required aria-describedby="dt-error"><div class="error-message" id="dt-error"></div></div>
+          </div>
+          <div class="form-check mt-4"><input class="form-check-input" type="checkbox" id="ok" required aria-describedby="ok-error"><label class="form-check-label" for="ok">I have read the <a href="#pickup-terms">demo pickup rules</a>. *</label></div>
+          <div class="error-message" id="ok-error"></div>
+          <div class="button-row mt-4">
+            <button class="btn btn-eco" type="submit">Submit demo request <span class="button-arrow" aria-hidden="true"></span></button>
+            <button class="btn btn-outline-eco" type="reset" id="resetBtn">Clear form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <aside class="col-lg-4" aria-label="Pickup estimate and rules">
+      <div class="estimate" aria-live="polite">
+        <p>Your estimated cost</p>
+        <div class="price"><span id="estimate">2,000</span> <span class="currency">KZT</span></div>
+        <small>Demo pricing. Changes with your load size and service type. No payment is required.</small>
+      </div>
+      <h2 class="aside-title">Your plan, in three steps.</h2>
+      <ol class="pickup-steps"><li>Enter sample contact details.</li><li>Choose a load size and preferred date.</li><li>Submit to see the confirmation.</li></ol>
+      <section class="terms" id="pickup-terms" tabindex="-1">
+        <h3>Demo pickup rules</h3>
+        <p>Choose today or a later date. Use a valid phone format and email. The confirmation only shows that the form passed validation.</p>
+        <p>For a real collection, contact an actual service provider and confirm accepted materials, availability and prices.</p>
+      </section>
+    </aside>
+  </div>
+</div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <a class="navbar-brand" href="index.html"><img class="brand-mark" src="images/logo.svg" alt="">EcoRecycle</a>
+          <p>Small habits. A lighter footprint.</p>
+          <p class="mb-0">A student front-end project about better waste sorting.</p>
+        </div>
+        <div class="col-md-7">
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="points.html">Find a point</a>
+            <a href="tips.html#quiz-title">Sorting challenge</a>
+            <a href="request.html">Pickup demo</a>
+          </nav>
+          <div>Built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://jquery.com/">jQuery</a> and <a href="https://fonts.google.com/">Google Fonts</a>. Map search: <a href="https://www.google.com/maps">Google Maps</a>.</div>
         </div>
       </div>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="row g-3">
-          <div class="col-md-6"><b class="text-white">EcoRecycle</b><br>Sort smart. Drop off close. Waste less.</div>
-          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a>.</div>
-        </div>
+      <div class="footer-bottom">
+        Credits: original illustrations and scripts assisted by Claude (Anthropic); design updates, code cleanup and logo assisted by ChatGPT (OpenAI). Directory locations are sample data. Pickup requests are a browser-only demo.
       </div>
-    </footer>
-
-    <script src="validation.js" defer></script>
-  </body>
+    </div>
+  </footer>
+  <button type="button" class="to-top" aria-label="Back to top">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/request.js"></script>
+</body>
 </html>

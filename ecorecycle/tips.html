@@ -1,169 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Eco tips | EcoRecycle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar eco-nav">
-        <div class="container flex-wrap">
-          <a class="navbar-brand" href="index.html">Eco<span>Recycle</span></a>
-          <ul class="nav flex-wrap">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="points.html">Drop-off points</a></li>
-            <li class="nav-item"><a class="nav-link active" href="tips.html">Eco tips</a></li>
-            <li class="nav-item"><a class="nav-link" href="request.html">Request pickup</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="container">
-        <div class="page-head">
-          <h1>Sorting made simple</h1>
-          <p class="lead">What goes in each bin, and which plastics you can use again.</p>
-        </div>
- 
-        <section>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <article class="box">
-                <h2 class="h4">Plastic</h2>
-                <p class="mb-0">Rinse, remove caps and flatten. Skip greasy takeaway boxes.</p>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="box">
-                <h2 class="h4">Paper</h2>
-                <p class="mb-0">Keep it dry and clean. Wet or waxed paper does not recycle.</p>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="box">
-                <h2 class="h4">Glass</h2>
-                <p class="mb-0">Bottles and jars only. Mirrors and window glass are different.</p>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="box">
-                <h2 class="h4">Batteries</h2>
-                <p class="mb-0">Tape the ends and keep them in a jar until you reach a point.</p>
-              </article>
-            </div>
-          </div>
-        </section>
- 
-        <section class="mt-5">
-          <h2 class="mb-2">Which plastics can you recycle?</h2>
-          <p>Look for the number inside the triangle on the bottom of the item.</p>
-          <div class="table-responsive">
-            <table class="table bg-white">
-              <caption>Rules can differ between collection points. Check with the point first.</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Code</th>
-                  <th scope="col">Plastic</th>
-                  <th scope="col">Found in</th>
-                  <th scope="col">Recyclable?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>PET</td>
-                  <td>Water and soda bottles</td>
-                  <td class="yes">Yes</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>HDPE</td>
-                  <td>Milk jugs, shampoo bottles</td>
-                  <td class="yes">Yes</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>PVC</td>
-                  <td>Pipes, some packaging</td>
-                  <td class="no">No</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>LDPE</td>
-                  <td>Plastic bags, films</td>
-                  <td class="maybe">Sometimes</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>PP</td>
-                  <td>Yogurt cups, bottle caps</td>
-                  <td class="yes">Yes</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>PS</td>
-                  <td>Foam trays, disposable cups</td>
-                  <td class="maybe">Sometimes</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td>Other</td>
-                  <td>Mixed plastics</td>
-                  <td class="no">No</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="mt-5">
-          <div class="box p-4 text-center bg-white shadow-sm">
-            <h3 class="mb-2">Higher or Lower Eco Game (Task 1)</h3>
-            <p class="text-muted">Guess whether the next item value is higher or lower than the current one.</p>
-            <div class="fs-2 fw-bold text-success my-3">Current Value: <span id="current-val">50</span></div>
-            <div class="my-3">
-              <button id="btn-higher" class="btn btn-eco px-4 m-2">Higher</button>
-              <button id="btn-lower" class="btn btn-outline-secondary px-4 m-2">Lower</button>
-            </div>
-            <p class="mt-3 fs-6">Lives: <span id="lives-count" class="fw-bold text-danger">3</span> | Current Streak: <span id="streak-count" class="fw-bold">0</span> | Best Streak: <span id="best-streak" class="fw-bold text-success">0</span></p>
-            <div id="game-message" class="fw-semibold mt-2"></div>
-            <button id="btn-restart" class="btn btn-dark mt-3" style="display:none;">Play Again</button>
-          </div>
-        </section>
- 
-        <section class="mt-5">
-          <h2 class="mb-3">Quick questions</h2>
-          <details>
-            <summary>Do I need to wash everything?</summary>
-            <p class="mb-0 mt-2">A quick rinse is enough. Food leftovers can spoil a whole batch of paper or plastic.</p>
-          </details>
-          <details>
-            <summary>Should I remove bottle caps?</summary>
-            <p class="mb-0 mt-2">Yes. Caps are often a different type of plastic, so put them in a separate bag.</p>
-          </details>
-          <details>
-            <summary>Where do I take old batteries and phones?</summary>
-            <p class="mb-0 mt-2">Never put them in the bin. Use a battery or electronics point from the <a href="points.html">drop-off points</a> page.</p>
-          </details>
-          <details>
-            <summary>What if the item is too big to carry?</summary>
-            <p class="mb-0 mt-2">Old furniture and appliances can be collected by a courier. Send a <a href="request.html">pickup request</a>.</p>
-          </details>
-        </section>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EcoRecycle: learn to sort waste, explore collection points and try a pickup request demo.">
+  <title>Eco tips | EcoRecycle</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="navbar eco-nav" aria-label="Main navigation">
+      <div class="container flex-wrap">
+        <a class="navbar-brand" href="index.html"><img class="brand-mark" src="images/logo.svg" alt="">EcoRecycle</a>
+        <ul class="nav flex-wrap">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="points.html">Drop-off points</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tips.html" aria-current="page">Eco tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="request.html">Request pickup</a></li>
+        </ul>
       </div>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="row g-3">
-          <div class="col-md-6"><b class="text-white">EcoRecycle</b><br>Sort smart. Drop off close. Waste less.</div>
-          <div class="col-md-6">Credits: <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://getbootstrap.com">Bootstrap</a></div>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+<div class="container">
+  <div class="page-head">
+    <span class="eyebrow">A small guide to a good habit</span>
+    <h1>Sorting, made simple.</h1>
+    <p class="lead">Know your materials. Try the challenge. Take one better habit home.</p>
+  </div>
+  <section aria-labelledby="bins-title">
+    <h2 id="bins-title" class="visually-hidden">Materials at a glance</h2>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-3"><article class="box material-card bc-plastic"><span class="step-number">01 / PLASTIC</span><h3>Empty. Rinse. Check.</h3><p>Check which plastic types your local point accepts. Follow its instructions for caps.</p></article></div>
+      <div class="col-md-6 col-lg-3"><article class="box material-card bc-paper"><span class="step-number">02 / PAPER</span><h3>Keep it clean &amp; dry.</h3><p>Separate clean paper and cardboard from greasy food packaging.</p></article></div>
+      <div class="col-md-6 col-lg-3"><article class="box material-card bc-glass"><span class="step-number">03 / GLASS</span><h3>Bottles. Jars. Repeat.</h3><p>Use a point that accepts container glass. Ask separately about mirrors and window glass.</p></article></div>
+      <div class="col-md-6 col-lg-3"><article class="box material-card bc-battery"><span class="step-number">04 / BATTERIES</span><h3>Give them their own place.</h3><p>Use a dedicated collection point and follow its instructions for safe storage and transport.</p></article></div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="quiz-title">
+    <div class="box quiz">
+      <div class="quiz-header">
+        <div><span class="eyebrow">Learn by doing</span><h2 id="quiz-title">The sorting challenge.</h2></div>
+        <div class="score-pill">Score: <b id="quiz-score">0</b> / <span id="quiz-total">8</span></div>
+      </div>
+      <p class="muted">Eight everyday items. Pick a bin. Keys 1–6 work while you are in the quiz.</p>
+      <p class="form-hint">A simplified learning game. Actual acceptance rules depend on the collection point.</p>
+      <div class="quiz-progress" aria-hidden="true"><div id="quiz-bar"></div></div>
+      <p class="eyebrow mb-0" id="quiz-counter">Item <span id="quiz-num">1</span> of 8</p>
+      <div id="quiz-item" class="quiz-item" tabindex="-1" aria-live="polite"></div>
+      <div id="quiz-options" class="d-flex flex-wrap gap-2"></div>
+      <div id="quiz-feedback" class="quiz-fb" role="status"></div>
+      <button id="quiz-next" type="button" class="btn btn-eco" hidden>Next item</button>
+      <div id="quiz-result" tabindex="-1" hidden>
+        <h3 id="quiz-result-title" class="h2"></h3>
+        <p id="quiz-result-text"></p>
+        <button id="quiz-restart" type="button" class="btn btn-eco">Try again</button>
+      </div>
+      <noscript><p>Please enable JavaScript to play the challenge.</p></noscript>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="plastic-title">
+    <div class="section-heading"><div><span class="eyebrow">Read the label</span><h2 id="plastic-title">A quick plastic guide.</h2></div><p>The number identifies the material. It does not guarantee local acceptance.</p></div>
+    <div class="table-wrap"><div class="table-responsive">
+      <table class="table">
+        <caption>Ask your collection point which items it currently accepts.</caption>
+        <thead><tr><th scope="col">Code</th><th scope="col">Material</th><th scope="col">Common examples</th><th scope="col">Before drop-off</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">01</th><td>PET</td><td>Water and soda bottles</td><td class="yes">Check bottle rules</td></tr>
+          <tr><th scope="row">02</th><td>HDPE</td><td>Shampoo and detergent bottles</td><td class="yes">Check bottle rules</td></tr>
+          <tr><th scope="row">03</th><td>PVC</td><td>Pipes, some packaging</td><td class="no">Ask a specialist</td></tr>
+          <tr><th scope="row">04</th><td>LDPE</td><td>Bags and film</td><td class="maybe">Check film collection</td></tr>
+          <tr><th scope="row">05</th><td>PP</td><td>Yogurt cups and caps</td><td class="maybe">Check item acceptance</td></tr>
+          <tr><th scope="row">06</th><td>PS</td><td>Foam trays and cups</td><td class="no">Ask a specialist</td></tr>
+          <tr><th scope="row">07</th><td>Other</td><td>Other or mixed plastics</td><td class="no">Ask a specialist</td></tr>
+        </tbody>
+      </table>
+    </div></div>
+  </section>
+  <section class="section" aria-labelledby="faq-title">
+    <div class="row g-4">
+      <div class="col-lg-4"><span class="eyebrow">Good questions</span><h2 id="faq-title">Small details.<br>Better sorting.</h2><p class="muted">A few things to know before you go.</p></div>
+      <div class="col-lg-8">
+        <div class="acc-item"><h3 class="m-0"><button type="button" class="acc-q" id="q1" aria-controls="a1" aria-expanded="false">Do I need to wash everything?</button></h3><div class="acc-a" id="a1" role="region" aria-labelledby="q1"><p class="mb-0">Empty containers and remove food residue. Follow your collection point’s instructions for rinsing and preparation.</p></div></div>
+        <div class="acc-item"><h3 class="m-0"><button type="button" class="acc-q" id="q2" aria-controls="a2" aria-expanded="false">Should I remove bottle caps?</button></h3><div class="acc-a" id="a2" role="region" aria-labelledby="q2"><p class="mb-0">Check the point’s rules. Some accept caps attached; others collect them separately. There is no single rule for every point.</p></div></div>
+        <div class="acc-item"><h3 class="m-0"><button type="button" class="acc-q" id="q3" aria-controls="a3" aria-expanded="false">Where do I take old batteries and phones?</button></h3><div class="acc-a" id="a3" role="region" aria-labelledby="q3"><p class="mb-0">Look for dedicated battery or electronics collection. Start with the map on the <a href="points.html">drop-off points page</a> and confirm what the location accepts.</p></div></div>
+        <div class="acc-item"><h3 class="m-0"><button type="button" class="acc-q" id="q4" aria-controls="a4" aria-expanded="false">What if the item is too big to carry?</button></h3><div class="acc-a" id="a4" role="region" aria-labelledby="q4"><p class="mb-0">Arrange collection with a real local provider. You can explore the process using our <a href="request.html">pickup request demo</a>; it does not book a courier.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <a class="navbar-brand" href="index.html"><img class="brand-mark" src="images/logo.svg" alt="">EcoRecycle</a>
+          <p>Small habits. A lighter footprint.</p>
+          <p class="mb-0">A student front-end project about better waste sorting.</p>
+        </div>
+        <div class="col-md-7">
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="points.html">Find a point</a>
+            <a href="tips.html#quiz-title">Sorting challenge</a>
+            <a href="request.html">Pickup demo</a>
+          </nav>
+          <div>Built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://jquery.com/">jQuery</a> and <a href="https://fonts.google.com/">Google Fonts</a>. Map search: <a href="https://www.google.com/maps">Google Maps</a>.</div>
         </div>
       </div>
-    </footer>
-    <script src="game.js" defer></script>
-  </body>
+      <div class="footer-bottom">
+        Credits: original illustrations and scripts assisted by Claude (Anthropic); design updates, code cleanup and logo assisted by ChatGPT (OpenAI). Directory locations are sample data. Pickup requests are a browser-only demo.
+      </div>
+    </div>
+  </footer>
+  <button type="button" class="to-top" aria-label="Back to top">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
 </html>
